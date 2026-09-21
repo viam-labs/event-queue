@@ -1,7 +1,7 @@
 import asyncio
+from collections import deque
 
 import pytest
-
 from viam.errors import NoCaptureToStoreError
 
 from event_queue_module.sensor import DEFAULT_QUEUE_CAPACITY, QueueSensor
@@ -10,8 +10,6 @@ from event_queue_module.sensor import DEFAULT_QUEUE_CAPACITY, QueueSensor
 def _make(capacity: int = DEFAULT_QUEUE_CAPACITY) -> QueueSensor:
     s = QueueSensor(name="test")
     s._capacity = capacity
-    from collections import deque
-
     s._queue = deque(maxlen=capacity)
     s._lock = asyncio.Lock()
     return s
