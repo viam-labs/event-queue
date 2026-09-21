@@ -1,0 +1,15 @@
+{
+    "module_id": "viam:event-queue",
+    "visibility": "public",
+    "url": "https://github.com/viam-labs/event-queue",
+    "description": "Bounded FIFO queue sensor. Producers push items via DoCommand; data manager drains one item per capture cycle into tabular data.",
+    "models": [
+        {
+            "api": "rdk:component:sensor",
+            "model": "viam:event-queue:sensor",
+            "markdown_link": "README.md#sensor"
+        }
+    ],
+    "entrypoint": "run.sh",
+    "first_run": ""
+}
