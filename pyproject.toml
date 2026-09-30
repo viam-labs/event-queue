@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Viam Labs" }]
 dependencies = [
-    "viam-sdk>=0.82",
+    "viam-sdk>=0.83",
 ]
 
 [project.optional-dependencies]
